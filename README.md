@@ -5,7 +5,7 @@ med filmer och serier, få affischer och metadata från TMDB, spela upp i appen
 eller på en Chromecast, sök torrents via Prowlarr/Jackett och skicka dem till
 qBittorrent – allt på din egen dator.
 
-Till appen hör också [**DeckLink**](../DeckLink), telefonappen som gör mobilen
+Till appen hör också [**DeckLink**](https://github.com/carrotunderscore/DeckLink), telefonappen som gör mobilen
 till en Bluetooth-handkontroll (styrplatta, D-pad, A/B och spelarknappar) för
 Media Library. DeckLink behöver inget program på datorn – Windows ser telefonen
 som ett vanligt tangentbord och en mus.
@@ -67,8 +67,8 @@ runt samma gränssnitt, så webbversionen och desktopversionen är identiska.
    stund och kräver internet.
 3. Appen öppnas i ett eget, ramlöst fönster.
 
-Kör du redan ett bygge finns [`dist/MediaLibraryDesktop.exe`](dist) och startas
-med samma `run.bat`.
+Har du byggt en `.exe` (se [Bygga en egen .exe](#bygga-en-egen-exe)) startar
+`run.bat` den i stället för källkoden.
 
 Vill du hellre köra som webbsida: starta `run.bat` och öppna
 `http://localhost:8420` i Chrome eller Edge. Webbläsarversionen har samma
@@ -301,7 +301,8 @@ Windows förmedlar – appen behöver alltså inte veta vilken enhet som styr.
 **DeckLink** är telefonappen som är byggd för Media Library: styrplatta med
 klick och tvåfingersscroll, D-pad, A/B och en spelarpanel med −30 s (J),
 −10 s (←), paus (K), +10 s (→), +30 s (L), helskärm (F) och stäng (Esc).
-Se [DeckLink/README.md](../DeckLink/README.md) för parkoppling och användning.
+Se [DeckLink-manualen](https://github.com/carrotunderscore/DeckLink/blob/main/README.md)
+för parkoppling och användning.
 
 ---
 
