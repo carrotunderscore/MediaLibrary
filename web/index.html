@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Media Library</title>
+<link rel="stylesheet" href="/static/style.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23ff2d55'/%3E%3Cpath d='M38 28l34 22-34 22z' fill='white'/%3E%3C/svg%3E" />
+</head>
+<body>
+<header class="topbar" id="topbar">
+  <a class="brand" href="#/"><span class="brand-mark">▶</span> MEDIA<span>LIBRARY</span></a>
+  <nav class="nav">
+    <a href="#/" data-nav="home">Hem</a>
+    <a href="#/movies" data-nav="movies">Filmer</a>
+    <a href="#/shows" data-nav="shows">Serier</a>
+    <a href="#/downloads" data-nav="downloads">Nedladdningar</a>
+  </nav>
+  <div class="searchbox">
+    <svg viewBox="0 0 24 24" width="16" height="16"><path fill="currentColor" d="M10 2a8 8 0 105.3 14l4.9 4.9 1.4-1.4-4.9-4.9A8 8 0 0010 2zm0 2a6 6 0 110 12 6 6 0 010-12z"/></svg>
+    <input id="searchInput" type="search" placeholder="Sök i biblioteket…" autocomplete="off" />
+  </div>
+  <button class="icon-btn" id="castBtn" title="Casta till Chromecast">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M1 18v3h3a3 3 0 00-3-3zm0-4v2a5 5 0 015 5h2a7 7 0 00-7-7zm0-4v2a9 9 0 019 9h2c0-6.08-4.93-11-11-11zM3 4h18a1 1 0 011 1v13h-6v-2h4V6H4v3H2V5a1 1 0 011-1z"/></svg>
+    <span class="cast-dot" id="castDot"></span>
+  </button>
+  <a class="icon-btn" href="#/settings" title="Inställningar">
+    <svg viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M12 8a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4z"/><path fill="currentColor" d="M19.4 13a7.6 7.6 0 000-2l2-1.6-2-3.4-2.4 1a7.7 7.7 0 00-1.7-1L15 3.5h-4L10.7 6a7.7 7.7 0 00-1.7 1l-2.4-1-2 3.4L6.6 11a7.6 7.6 0 000 2l-2 1.6 2 3.4 2.4-1a7.7 7.7 0 001.7 1l.3 2.5h4l.3-2.5a7.7 7.7 0 001.7-1l2.4 1 2-3.4-2-1.6z"/></svg>
+  </a>
+  <div class="window-controls" id="windowControls">
+    <button class="win-btn" data-window-action="minimize" title="Minimera">
+      <svg viewBox="0 0 12 12" width="12" height="12"><path stroke="currentColor" stroke-width="1.2" d="M2.5 6h7"/></svg>
+    </button>
+    <button class="win-btn" data-window-action="maximize" id="winMaxBtn" title="Maximera">
+      <svg class="icon-max" viewBox="0 0 12 12" width="12" height="12"><rect x="2.6" y="2.6" width="6.8" height="6.8" rx="1.3" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+      <svg class="icon-restore" viewBox="0 0 12 12" width="12" height="12"><rect x="2.4" y="3.6" width="6" height="6" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.2"/><path stroke="currentColor" stroke-width="1.2" d="M4.6 3.6V2.6h4.8v4.8H8.4"/></svg>
+    </button>
+    <button class="win-btn close" data-window-action="close" title="Stäng">
+      <svg viewBox="0 0 12 12" width="12" height="12"><path stroke="currentColor" stroke-width="1.2" d="M3 3l6 6M9 3l-6 6"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="app"><div class="loading-screen"><div class="spinner"></div></div></main>
+
+<div id="castbar" class="castbar hidden"></div>
+<div id="modalRoot"></div>
+<div id="toast" class="toast"></div>
+
+<script src="/static/vendor/hls.light.min.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>
