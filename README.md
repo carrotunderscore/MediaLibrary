@@ -13,6 +13,15 @@ som ett vanligt tangentbord och en mus.
 > Använd bara torrentkällor och material som du har rätt att komma åt. Media
 > Library innehåller ingen egen torrentsajt eller torrentkatalog.
 
+## Ladda ner
+
+[**Ladda ner MediaLibraryDesktop.exe**](https://github.com/carrotunderscore/MediaLibrary/releases/latest/download/MediaLibraryDesktop.exe)
+(1,8 GB) – färdig Windows-version. Inget Python behövs, undertextgeneratorn
+ingår.
+
+Filen ligger under [**Releases**](https://github.com/carrotunderscore/MediaLibrary/releases)
+eftersom GitHub inte tillåter filer över 100 MB i själva kodträdet.
+
 ---
 
 ## Innehåll
